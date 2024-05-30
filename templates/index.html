@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos del Estudiante</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Datos del Estudiante</h1>
+    <ul>
+        <li>
+            <strong>Nombre:</strong><br>
+            {{ estudiante.nombre }}
+        </li>
+        <li>
+            <strong>Carnet:</strong><br>
+            {{ estudiante.carnet }}
+        </li>
+    </ul>
+
+    <h2>Datos Universidad y Curso</h2>
+    <ul>
+        {% for dato in otros_datos %}
+        <li>{{ dato }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
